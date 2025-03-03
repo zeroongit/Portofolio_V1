@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    background-color: black;
+}
+
+#home {
+    background-image: url(background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.navbar {
+    background-color: dark;
+    position: fixed;
+    margin-left: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: cyan !important;
+}
+.navbar-toggler {
+    color: cyan;
+    border-color: white;
+}
+
+.animate-text {
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#about {
+    margin-top: 50px;
+    height: 100vh;
+}
+.container {
+    align-items: center;
+    color: white;
+}
+.skill {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-left: auto;
+}
+.icons-container {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal jika diperlukan */
+    gap: 20px; /* Jarak antar ikon */
+    margin-top: 20px;
+  }
+
+  .contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    height: 100vh;
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+
+.icon {
+    font-size: 30px;
+    display: inline-flex;
+    gap: 20px;
+}
+  
+  
+.animate-text,span {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    display: none;
+}
+
+.animate-text, span.text-in {
+    display: block;
+    animation: textIn .5s ease;
+}
+
+.animate-text, span.text-out {
+    animation: textOut .5s ease;
+}
+
+@keyframes textIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes textOut {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
