@@ -1,30 +1,35 @@
-import SplitText from "./SplitText"
-
-const handleAnimationComplete = () => {
-  console.log("All letters have animated!")
-}
+import React from "react";
+import SplitText from "./SplitText"; 
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
-      <SplitText
-        text="Hello, GSAP!"
-        className="text-5xl font-bold mb-4"
-        delay={100}
-        duration={0.6}
-        ease="easeOut"
-        splitType="chars"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={handleAnimationComplete}
-      />
+    <section className="w-full min-h-screen flex items-center justify-center bg-gray-50 px-8">
+      <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl">
+        
+        {/* Kiri - Perkenalan */}
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            <SplitText>Hi, I’m Habibullah Kharis Pramudita</SplitText>
+          </h1>
+          <p className="text-lg text-gray-600">
+            I’m a <span className="font-semibold">Fullstack Developer</span> passionate
+            about building modern web applications, blending clean design with
+            powerful functionality.
+          </p>
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-md hover:bg-blue-700 transition">
+            Let’s Connect
+          </button>
+        </div>
 
-      <p className="text-lg max-w-xl">
-        I’m a Fullstack Developer building modern web apps with React, Tailwind, and Node.js.
-      </p>
+        {/* Kanan - Foto */}
+        <div className="flex justify-center">
+          <img
+            src="../assets/profile.jpg"
+            alt="My profile"
+            className="w-72 h-72 object-cover rounded-full shadow-lg"
+          />
+        </div>
+      </div>
     </section>
-  )
+  );
 }
