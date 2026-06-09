@@ -342,6 +342,7 @@ const ProfileCardComponent = ({
     onContactClick?.();
   }, [onContactClick]);
 
+
   // Complex styles that require CSS variables and can't be done with Tailwind
   const shineStyle = {
     maskImage: 'var(--icon)',
@@ -397,10 +398,10 @@ const ProfileCardComponent = ({
     transform: 'translate3d(0, 0, 1.1px)',
     overflow: 'hidden',
     backgroundImage: `radial-gradient(
-      farthest-corner circle at var(--pointer-x) var(--pointer-y),
-      hsl(248, 25%, 80%) 12%,
-      hsla(207, 40%, 30%, 0.8) 90%
-    )`,
+    farthest-corner circle at var(--pointer-x) var(--pointer-y),
+    hsl(248, 25%, 80%) 12%,
+    hsla(207, 40%, 30%, 0.8) 90%
+  )`,
     mixBlendMode: 'overlay',
     filter: 'brightness(0.8) contrast(1.2)',
     zIndex: 4,
@@ -427,7 +428,7 @@ const ProfileCardComponent = ({
       )}
       <div ref={shellRef} className="relative z-[1] group">
         <section
-          className="grid relative overflow-hidden backface-hidden"
+          className="grid relative overflow-hidden backface-hidden "
           style={{
             height: '80svh',
             maxHeight: '540px',
@@ -472,9 +473,8 @@ const ProfileCardComponent = ({
 
             {/* Avatar content */}
             <div
-              className="overflow-visible backface-hidden"
+              className="overflow-visible backface-hidden mix-blend-normal md:mix-blend-luminosity"
               style={{
-                mixBlendMode: 'luminosity',
                 transform: 'translateZ(2px)',
                 gridArea: '1 / -1',
                 borderRadius: cardRadius,

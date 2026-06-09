@@ -5,7 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import WelcomeScreen from "./components/WelcomeScreen";
-import Lightfall from './components/Lightfall';
+import Particles from "./components/Particles";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -28,24 +28,18 @@ function App() {
               pointerEvents: "none", // Agar tidak menghalangi tarikan mouse pada Lanyard 3D Anda
             }}
           >
-            <Lightfall
-              colors={['#00f2fe', '#4facfe', '#000000']} // Tema warna Cyan khas Web3/Blockchain
-              backgroundColor="#020208" // Warna dasar sangat gelap agar teks putih kontras dan terbaca
-              speed={0.4}
-              streakCount={3}
-              streakWidth={1.5}
-              streakLength={1.2}
-              glow={1.5}
-              density={0.5}
-              twinkle={1}
-              zoom={2.5}
-              backgroundGlow={0.3}
-              opacity={0.6} // Opacity diturunkan sedikit agar tidak terlalu menyilaukan mata
-              mouseInteraction={true}
-              mouseStrength={0.6}
-              mouseRadius={1.2}
-              mouseDampening={0.15}
-            />
+
+          <Particles
+            particleColors={["#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={1}
+        />
           </div>
 
           {/* KONTEN UTAMA: Diberikan z-index lebih tinggi agar berada di atas background shader */}
