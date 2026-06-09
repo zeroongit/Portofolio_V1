@@ -1,18 +1,5 @@
 import { motion } from "framer-motion";
 
-const techLogos = [
-  { name: "React", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "Solidity", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
-  { name: "PHP", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-  { name: "Firebase", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" },
-  { name: "MetaMask", url: "https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/Metamask-logo.svg" },
-  { name: "Google Cloud", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
-  { name: "Tailwind", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "Node.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "JavaScript", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-];
-
 export default function Projects() {
   const projects = [
     {
@@ -33,24 +20,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 overflow-hidden">
-      <h2 className="text-3xl font-bold text-center mb-12">Projects & Tech Stack</h2>
-
-      {/* Scrolling Tech Logos */}
-      <div className="flex mb-20 overflow-hidden group">
-        <motion.div 
-          className="flex space-x-12 whitespace-nowrap"
-          animate={{ x: [0, -1000] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-        >
-          {[...techLogos, ...techLogos].map((logo, index) => (
-            <div key={index} className="flex flex-col items-center justify-center w-20 grayscale hover:grayscale-0 transition-all duration-300">
-              <img src={logo.url} alt={logo.name} className="h-12 w-12 object-contain" />
-              <span className="text-[10px] text-gray-500 mt-2">{logo.name}</span>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-
+      <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
       {/* Projects Cards */}
       <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6">
         {projects.map((p, i) => (
