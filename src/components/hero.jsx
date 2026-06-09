@@ -1,5 +1,6 @@
 import React from "react";
 import SplitText from "./SplitText"; 
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             
-            <img
+            <Image
               src="/profile.jpg"
               alt="Habibullah Kharis Pramudita"
               className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-2 border-white/10 shadow-2xl"

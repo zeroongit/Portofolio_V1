@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const techLogos = [
   { name: "React", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -44,7 +45,7 @@ export default function Projects() {
         >
           {[...techLogos, ...techLogos].map((logo, index) => (
             <div key={index} className="flex flex-col items-center justify-center w-20 grayscale hover:grayscale-0 transition-all duration-300">
-              <img src={logo.url} alt={logo.name} className="h-12 w-12 object-contain" />
+              <Image src={logo.url} alt={logo.name} className="h-12 w-12 object-contain" />
               <span className="text-[10px] text-gray-500 mt-2">{logo.name}</span>
             </div>
           ))}
